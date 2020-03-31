@@ -1,6 +1,6 @@
 # output "folder" {
 #   description = "Folder resource (for single use)."
-#   value       = "${module.folders.folder}"
+#   value       = google_folder.folders[0]
 # }
 
 # output "id" {
@@ -15,25 +15,25 @@
 
 output "folders" {
   description = "Folder resources."
-  value       = "${module.folders.folders}"
+  value       = google_folder.folders
 }
 
 output "ids" {
   description = "Folder ids."
-  value       = "${module.folders.ids}"
+  value       = zipmap(var.names, slice(google_folder.folders[*].name, 0, length(var.names)))
 }
 
 output "names" {
   description = "Folder names."
-  value       = "${module.folders.names}"
+  value       = zipmap(var.names, slice(google_folder.folders[*].display_name, 0, length(var.names)))
 }
 
-output "ids_list" {
-  description = "List of folder ids."
-  value       = module.folders.folders[*].name
-}
+# output "ids_list" {
+#   description = "List of folder ids."
+#   value       = module.folders.google_folder.folders[*].name
+# }
 
 output "names_list" {
   description = "List of folder names."
-  value       = "${module.folders.names_list}"
+  value       = google_folder.folders[*].display_name
 }
