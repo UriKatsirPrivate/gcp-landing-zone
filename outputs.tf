@@ -48,14 +48,14 @@
 #   value       = "${module.projects.project-auto-create-network}"
 # }
 
-output "folder" {
-  description = "Folder ID"
-  value       = "${module.folders.folder}"
-}
+# output "folder" {
+#   description = "Folder ID"
+#   value       = "${module.folders.folder}"
+# }
 
-output "folder-id" {
-  description = "Folder ID"
-  value       = "${module.folders.id}"
-}
+# output "folder-id" {
+#   description = "Folder ID"
+#   value       = "${module.folders.id}"
+# }
 
 

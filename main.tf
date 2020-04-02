@@ -8,7 +8,7 @@ module "folders" {
 module "projects" {
   source            = "./modules/projects/"
   folder-id         = "${module.folders.id}"
-  project-name      = "${random_string.random.result}"
+  project-id      = "${random_string.random.result}"
   project-id-no-vpc = "${random_string.random-no-vpc.result}"
 }
 

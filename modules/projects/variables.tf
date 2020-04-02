@@ -13,7 +13,7 @@ variable "folder-id" {
   type        = string
 }
 
-variable "project-name" {
+variable "project-id" {
   description = "Project name for the new project"
   type        = string
 }
@@ -29,8 +29,8 @@ variable "project-id-no-vpc" {
 #   description = "The list of apis to activate within the project"
 #   type        = list(string)
 #   default = [
-#     "sqladmin.googleapis.com",
-#     "bigquery-json.googleapis.com",
+#     "compute.googleapis.com",
+#     "storage-component.googleapis.com",
 #   ]
 # }
 
