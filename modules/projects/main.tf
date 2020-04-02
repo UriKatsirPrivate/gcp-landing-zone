@@ -1,9 +1,9 @@
-resource "google_project" "project-in-a-folder" {
-  name            = "Default Project"
-  project_id      = var.project-id
-  folder_id       = var.folder-id
-  billing_account = "013FD1-9B204A-8B60C7"
-}
+# resource "google_project" "project-in-a-folder" {
+#   name            = "Default Project"
+#   project_id      = var.project-id
+#   folder_id       = var.folder-id
+#   billing_account = "013FD1-9B204A-8B60C7"
+# }
 
 resource "google_project" "project-no-vpc" {
   name                = "No Default VPC"

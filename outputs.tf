@@ -58,4 +58,7 @@
 #   value       = "${module.folders.id}"
 # }
 
-
+output "project-id" {
+  description = "Project ID"
+  value       = "${module.projects.project-no-vpc-project-id}"
+}

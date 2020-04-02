@@ -8,8 +8,17 @@ module "folders" {
 module "projects" {
   source            = "./modules/projects/"
   folder-id         = "${module.folders.id}"
-  project-id      = "${random_string.random.result}"
+  project-id        = "${random_string.random.result}"
   project-id-no-vpc = "${random_string.random-no-vpc.result}"
+}
+
+module "vpc" {
+  source                  = "./modules/vpc"
+  network_name            = var.network_name
+  auto_create_subnetworks = var.auto_create_subnetworks
+  routing_mode            = var.routing_mode
+  project_id              = "${module.projects.project-no-vpc-project-id}"
+  description             = var.description
 }
 
 resource "random_string" "random" {
