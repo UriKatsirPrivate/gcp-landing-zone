@@ -21,6 +21,14 @@ module "vpc" {
   description             = var.description
 }
 
+module "subnets" {
+  source       = "./modules/subnets"
+  project_id   = "${module.projects.project-no-vpc-project-id}"
+  network_name = "${module.vpc.network_name}"
+  subnets      = var.subnets
+  # secondary_ranges = var.secondary_ranges
+}
+
 resource "random_string" "random" {
   length           = 11
   special          = false

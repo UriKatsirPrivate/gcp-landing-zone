@@ -62,3 +62,10 @@ output "project-id" {
   description = "Project ID"
   value       = "${module.projects.project-no-vpc-project-id}"
 }
+
+output "network-name" {
+  description = "VPC name"
+  value       = "${module.vpc.network_name}"
+}
+
+
