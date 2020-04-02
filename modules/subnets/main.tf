@@ -18,14 +18,4 @@ resource "google_compute_subnetwork" "subnetwork" {
   network                  = var.network_name
   project                  = var.project_id
   description              = lookup(each.value, "description", null)
-  secondary_ip_range = [
-    for i in range(
-      length(
-        contains(
-        keys(var.secondary_ranges), each.value.subnet_name) == true
-        ? var.secondary_ranges[each.value.subnet_name]
-        : []
-    )) :
-    var.secondary_ranges[each.value.subnet_name][i]
-  ]
 }
