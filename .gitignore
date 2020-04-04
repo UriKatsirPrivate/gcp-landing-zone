@@ -29,5 +29,5 @@ override.tf.json
 # example: *tfplan*
 
 # security folder
-/security/*
+/security/*.json
 .vscode/settings.json
