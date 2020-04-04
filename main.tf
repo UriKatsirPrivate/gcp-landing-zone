@@ -1,6 +1,5 @@
 module "folders" {
-  source = "./modules/folders/"
-  # project_id      = var.project_id
+  source  = "./modules/folders/"
   parent  = var.parent
   names   = var.names
   folders = var.folders
@@ -34,11 +33,10 @@ module "subnets" {
 }
 
 module "firewall" {
-  source            = "./modules/firewall"
-  ssh_source_ranges = var.ssh_source_ranges
-  network           = "${module.vpc.network_name}"
-  project_id        = "${module.projects.project-no-vpc-project-id}"
-  # subnets           = var.subnets
+  source              = "./modules/firewall"
+  ssh_source_ranges   = var.ssh_source_ranges
+  network             = "${module.vpc.network_name}"
+  project_id          = "${module.projects.project-no-vpc-project-id}"
   http_source_ranges  = var.http_source_ranges
   https_source_ranges = var.https_source_ranges
 }
