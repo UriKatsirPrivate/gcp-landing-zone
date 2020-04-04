@@ -8,8 +8,7 @@
 resource "google_project" "project-no-vpc" {
   name                = var.project-name-no-vpc
   project_id          = var.project-id-no-vpc
-  folder_id           = var.folder-id
+  folder_id           = var.folder-id-no-vpc
   auto_create_network = false
-  # billing_account     = "013FD1-9B204A-8B60C7"
   billing_account = var.billing_account
 }

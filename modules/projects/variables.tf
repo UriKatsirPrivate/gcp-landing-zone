@@ -13,6 +13,11 @@ variable "folder-id" {
   type        = string
 }
 
+variable "folder-id-no-vpc" {
+  description = "Folder ID to create the project in"
+  type        = string
+}
+
 variable "project-id" {
   description = "Project name for the new project"
   type        = string

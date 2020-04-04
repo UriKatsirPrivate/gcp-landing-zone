@@ -11,6 +11,7 @@ module "projects" {
   folder-id           = "${module.folders.id}"
   project-id          = "${random_string.random.result}"
   project-id-no-vpc   = "${random_string.random-no-vpc.result}"
+  folder-id-no-vpc    = "${module.folders.id}"
   project-name-no-vpc = var.project-name-no-vpc
   billing_account     = var.billing_account
 }

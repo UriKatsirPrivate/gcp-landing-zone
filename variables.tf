@@ -101,3 +101,9 @@ variable "project-name-no-vpc" {
   type        = string
   default     = "No Default VPC"
 }
+
+# variable "folder-id-no-vpc" {
+#   description = "Folder ID to create the project in"
+#   type        = string
+#   default     = "No Default VPC"
+# }
