@@ -1,8 +1,8 @@
 module "folders" {
   source  = "./modules/folders/"
   parent  = var.parent
-  names   = var.names
-  folders = var.folders
+  names   = var.folder-names
+  # folders = var.folders
 }
 
 module "projects" {
@@ -22,7 +22,7 @@ module "vpc" {
   auto_create_subnetworks = var.auto_create_subnetworks
   routing_mode            = var.routing_mode
   project_id              = "${module.projects.project-no-vpc-project-id}"
-  description             = var.description
+  # description             = var.description
 }
 
 module "subnets" {
