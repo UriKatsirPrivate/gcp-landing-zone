@@ -33,6 +33,16 @@ output "default-project-id" {
   value       = "${module.projects.default-project-id}"
 }
 
+output "no-vpc-project-name" {
+  description = "Project ID"
+  value       = "${module.projects.project-no-vpc-project-name}"
+}
+
+output "no-vpc-project-id" {
+  description = "Project ID"
+  value       = "${module.projects.project-no-vpc-project-id}"
+}
+
 # output "project-org-id" {
 #   description = "Org ID"
 #   value       = "${module.projects.org-id}"
@@ -58,14 +68,9 @@ output "default-project-id" {
 #   value       = "${module.folders.id}"
 # }
 
-output "no-vpc-project-id" {
-  description = "Project ID"
-  value       = "${module.projects.project-no-vpc-project-id}"
-}
-
-output "network-name" {
-  description = "VPC name"
-  value       = "${module.vpc.network_name}"
-}
+# output "network-name" {
+#   description = "VPC name"
+#   value       = "${module.vpc.network_name}"
+# }
 
 

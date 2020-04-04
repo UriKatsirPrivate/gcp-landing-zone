@@ -8,6 +8,18 @@ output "default-project-id" {
   value       = google_project.project-in-a-folder.project_id
 }
 
+output "project-no-vpc-project-id" {
+  description = "Project ID"
+  value       = google_project.project-no-vpc.project_id
+}
+
+output "project-no-vpc-project-name" {
+  description = "Project name"
+  value       = google_project.project-no-vpc.name
+}
+
+
+
 # output "org-id" {
 #   description = "Org ID"
 #   value       = google_project.project-in-a-folder.org_id
@@ -23,10 +35,7 @@ output "default-project-id" {
 #   value       = google_project.project-in-a-folder.auto_create_network
 # }
 
-output "project-no-vpc-project-id" {
-  description = "Project ID"
-  value       = google_project.project-no-vpc.project_id
-}
+
 
 
 
