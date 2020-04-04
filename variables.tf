@@ -89,3 +89,9 @@ variable "https_source_ranges" {
   description = "List of IP CIDR ranges for tag-based HTTPS rule, defaults to 0.0.0.0/0."
   default     = ["0.0.0.0/0"]
 }
+
+variable "billing_account" {
+  type        = string
+  description = "Billing account for the project"
+  default     = "013FD1-9B204A-8B60C7"
+}

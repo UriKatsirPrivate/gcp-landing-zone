@@ -52,3 +52,8 @@ variable "disable_dependent_services" {
   type        = string
 }
 
+variable "billing_account" {
+  type        = string
+  description = "Billing account for the project"
+}
+
