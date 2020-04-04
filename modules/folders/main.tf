@@ -1,15 +1,15 @@
-locals {
-  folders = {
-    for x in var.folders :
-    "${x.folder_name}/${x.folder_parent}" => x
-  }
-}
+# locals {
+#   folders = {
+#     for x in var.folders :
+#     "${x.folder_name}/${x.folder_parent}" => x
+#   }
+# }
 
-resource "google_folder" "folders1" {
-  for_each     = local.folders
-  display_name = each.value.folder_name
-  parent       = each.value.folder_parent
-}
+# resource "google_folder" "folders1" {
+#   for_each     = local.folders
+#   display_name = each.value.folder_name
+#   parent       = each.value.folder_parent
+# }
 
 
 resource "google_folder" "folders" {
