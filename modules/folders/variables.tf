@@ -14,8 +14,7 @@ variable "prefix" {
   default     = ""
 }
 
-variable "folders" {
-  type        = list(map(string))
-  description = "The list of folders to create"
-
-}
+# variable "folders" {
+#   type        = list(map(string))
+#   description = "The list of folders to create"
+# }
