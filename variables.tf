@@ -66,11 +66,11 @@ variable "folders" {
   description = "The list of folders to create"
   default = [
     {
-      folder_name   = "test1"
+      folder_name   = "test11"
       folder_parent = "organizations/910206293951"
     },
     {
-      folder_name   = "test2"
+      folder_name   = "test22"
       folder_parent = "organizations/910206293951"
     }
   ]
