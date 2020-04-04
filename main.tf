@@ -28,6 +28,16 @@ module "subnets" {
   subnets      = var.subnets
 }
 
+module "firewall" {
+  source            = "./modules/firewall"
+  ssh_source_ranges = var.ssh_source_ranges
+  network           = "${module.vpc.network_name}"
+  project_id        = "${module.projects.project-no-vpc-project-id}"
+  # subnets           = var.subnets
+  http_source_ranges  = var.http_source_ranges
+  https_source_ranges = var.https_source_ranges
+}
+
 resource "random_string" "random" {
   length           = 11
   special          = false

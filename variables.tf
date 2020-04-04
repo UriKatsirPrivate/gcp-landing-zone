@@ -42,21 +42,35 @@ variable "subnets" {
   description = "The list of subnets being created"
   default = [
     {
-      subnet_name   = "subnet-01"
-      subnet_ip     = "10.10.10.0/24"
-      subnet_region = "us-west1"
+      subnet_name   = "subnet-10"
+      subnet_ip     = "10.11.10.0/24"
+      subnet_region = "europe-west1"
     },
     {
-      subnet_name           = "subnet-02"
-      subnet_ip             = "10.10.20.0/24"
+      subnet_name           = "subnet-20"
+      subnet_ip             = "10.21.20.0/24"
       subnet_region         = "us-west1"
       subnet_private_access = "true"
       description           = "This subnet has a description"
     },
     {
-      subnet_name   = "subnet-03"
-      subnet_ip     = "10.10.30.0/24"
-      subnet_region = "us-west1"
+      subnet_name   = "subnet-30"
+      subnet_ip     = "10.31.30.0/24"
+      subnet_region = "us-east1"
     }
   ]
+}
+
+variable "ssh_source_ranges" {
+  description = "List of IP CIDR ranges for tag-based SSH rule, defaults to 0.0.0.0/0."
+  default     = ["0.0.0.0/0"]
+}
+variable "http_source_ranges" {
+  description = "List of IP CIDR ranges for tag-based HTTP rule, defaults to 0.0.0.0/0."
+  default     = ["0.0.0.0/0"]
+}
+
+variable "https_source_ranges" {
+  description = "List of IP CIDR ranges for tag-based HTTPS rule, defaults to 0.0.0.0/0."
+  default     = ["0.0.0.0/0"]
 }
