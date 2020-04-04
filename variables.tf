@@ -95,3 +95,9 @@ variable "billing_account" {
   description = "Billing account for the project"
   default     = "013FD1-9B204A-8B60C7"
 }
+
+variable "project-name-no-vpc" {
+  description = "Project name for the new project without a default vpc"
+  type        = string
+  default     = "No Default VPC"
+}

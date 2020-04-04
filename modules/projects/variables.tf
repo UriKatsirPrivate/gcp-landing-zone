@@ -19,6 +19,11 @@ variable "project-id" {
 }
 
 variable "project-id-no-vpc" {
+  description = "Project id for the new project without a default vpc"
+  type        = string
+}
+
+variable "project-name-no-vpc" {
   description = "Project name for the new project without a default vpc"
   type        = string
 }

@@ -6,7 +6,7 @@
 # }
 
 resource "google_project" "project-no-vpc" {
-  name                = "No Default VPC"
+  name                = var.project-name-no-vpc
   project_id          = var.project-id-no-vpc
   folder_id           = var.folder-id
   auto_create_network = false

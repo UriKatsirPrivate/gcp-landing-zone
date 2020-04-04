@@ -7,11 +7,12 @@ module "folders" {
 }
 
 module "projects" {
-  source            = "./modules/projects/"
-  folder-id         = "${module.folders.id}"
-  project-id        = "${random_string.random.result}"
-  project-id-no-vpc = "${random_string.random-no-vpc.result}"
-  billing_account   = var.billing_account
+  source              = "./modules/projects/"
+  folder-id           = "${module.folders.id}"
+  project-id          = "${random_string.random.result}"
+  project-id-no-vpc   = "${random_string.random-no-vpc.result}"
+  project-name-no-vpc = var.project-name-no-vpc
+  billing_account     = var.billing_account
 }
 
 module "vpc" {
