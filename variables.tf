@@ -102,6 +102,12 @@ variable "project-name-no-vpc" {
   default     = "No Default VPC"
 }
 
+variable "project-name" {
+  description = "Project name for the new project with a default vpc"
+  type        = string
+  default     = "Default VPC"
+}
+
 # variable "folder-id-no-vpc" {
 #   description = "Folder ID to create the project in"
 #   type        = string

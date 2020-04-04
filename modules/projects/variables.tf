@@ -33,6 +33,11 @@ variable "project-name-no-vpc" {
   type        = string
 }
 
+variable "project-name" {
+  description = "Project name for the new project without a default vpc"
+  type        = string
+}
+
 
 
 # variable "activate_apis" {

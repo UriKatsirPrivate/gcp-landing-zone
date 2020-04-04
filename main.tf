@@ -10,6 +10,7 @@ module "projects" {
   source              = "./modules/projects/"
   folder-id           = "${module.folders.id}"
   project-id          = "${random_string.random.result}"
+  project-name        = var.project-name
   project-id-no-vpc   = "${random_string.random-no-vpc.result}"
   folder-id-no-vpc    = "${module.folders.id}"
   project-name-no-vpc = var.project-name-no-vpc
