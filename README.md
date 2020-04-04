@@ -13,3 +13,4 @@
 2. Use dynamic resource creation (locals + for_each loop)
 3. explore enabling [security services](https://cloud.google.com/security/products) <br/>
     3.1 The above should be driven by a boolean flag that the user can set
+4. Move default values into a tfvars file    
