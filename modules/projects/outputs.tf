@@ -1,12 +1,12 @@
-# output "project-name" {
-#   description = "Project Name"
-#   value       = google_project.project-in-a-folder.name
-# }
+output "default-project-name" {
+  description = "Project Name"
+  value       = google_project.project-in-a-folder.name
+}
 
-# output "project-id" {
-#   description = "Project ID"
-#   value       = google_project.project-in-a-folder.project_id
-# }
+output "default-project-id" {
+  description = "Project ID"
+  value       = google_project.project-in-a-folder.project_id
+}
 
 # output "org-id" {
 #   description = "Org ID"
@@ -27,4 +27,6 @@ output "project-no-vpc-project-id" {
   description = "Project ID"
   value       = google_project.project-no-vpc.project_id
 }
+
+
 

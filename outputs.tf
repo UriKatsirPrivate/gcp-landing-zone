@@ -23,15 +23,15 @@
 #   value       = "${module.folders.names_list}"
 # }
 
-# output "project-name" {
-#   description = "Project name"
-#   value       = "${module.projects.project-name}"
-# }
+output "default-project-name" {
+  description = "Project name"
+  value       = "${module.projects.default-project-name}"
+}
 
-# output "project-id" {
-#   description = "Project ID"
-#   value       = "${module.projects.project-id}"
-# }
+output "default-project-id" {
+  description = "Project ID"
+  value       = "${module.projects.default-project-id}"
+}
 
 # output "project-org-id" {
 #   description = "Org ID"
@@ -58,7 +58,7 @@
 #   value       = "${module.folders.id}"
 # }
 
-output "project-id" {
+output "no-vpc-project-id" {
   description = "Project ID"
   value       = "${module.projects.project-no-vpc-project-id}"
 }
