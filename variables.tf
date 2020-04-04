@@ -61,6 +61,21 @@ variable "subnets" {
   ]
 }
 
+variable "folders" {
+  type        = list(map(string))
+  description = "The list of folders to create"
+  default = [
+    {
+      folder_name   = "test1"
+      folder_parent = "organizations/910206293951"
+    },
+    {
+      folder_name   = "test2"
+      folder_parent = "organizations/910206293951"
+    }
+  ]
+}
+
 variable "ssh_source_ranges" {
   description = "List of IP CIDR ranges for tag-based SSH rule, defaults to 0.0.0.0/0."
   default     = ["0.0.0.0/0"]
