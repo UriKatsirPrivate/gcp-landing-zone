@@ -8,6 +8,11 @@ output "default-project-id" {
   value       = google_project.project-in-a-folder.project_id
 }
 
+output "default-project-folder" {
+  description = "default-project-folder"
+  value       = google_project.project-in-a-folder.folder_id
+}
+
 output "project-no-vpc-project-id" {
   description = "Project ID"
   value       = google_project.project-no-vpc.project_id
@@ -16,6 +21,11 @@ output "project-no-vpc-project-id" {
 output "project-no-vpc-project-name" {
   description = "Project name"
   value       = google_project.project-no-vpc.name
+}
+
+output "no-vpc-project-folder" {
+  description = "default-project-folder"
+  value       = google_project.project-no-vpc.folder_id
 }
 
 

@@ -50,3 +50,10 @@ https_source_ranges = ["0.0.0.0/0"]
 billing_account     = "013FD1-9B204A-8B60C7"
 project-name-no-vpc = "No Default VPC"
 project-name        = "Default VPC"
+
+/* Folder name to create the projects in.
+The value should match one of the folder names specified above (folder-names variable)
+If no match found, project will be assigned a default folder*/
+
+folder-name        = "development"
+folder-name-no-vpc = "prod"

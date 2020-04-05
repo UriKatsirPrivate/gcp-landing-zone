@@ -6,13 +6,12 @@ module "folders" {
 }
 
 module "projects" {
-  source = "./modules/projects/"
-  # folder-id           = "${module.folders.id}"
-  folder-id           = module.folders.ids_list[1]
+  source              = "./modules/projects/"
+  folder-id           = lookup(tomap(module.folders.ids), var.folder-name, module.folders.ids_list[0])
   project-id          = "${random_string.random.result}"
   project-name        = var.project-name
   project-id-no-vpc   = "${random_string.random-no-vpc.result}"
-  folder-id-no-vpc    = module.folders.ids_list[2]
+  folder-id-no-vpc    = lookup(tomap(module.folders.ids), var.folder-name-no-vpc, module.folders.ids_list[0])
   project-name-no-vpc = var.project-name-no-vpc
   billing_account     = var.billing_account
 }

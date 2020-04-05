@@ -113,3 +113,15 @@ variable "project-name" {
 #   type        = string
 #   default     = "No Default VPC"
 # }
+
+variable "folder-name" {
+  description = "Folder name to create the default project in. If no match found, project will be assigned a default folder"
+  type        = string
+  # default     = "development"
+}
+
+variable "folder-name-no-vpc" {
+  description = "Folder name to create the project with no default vpc in. If no match found, project will be assigned a default folder"
+  type        = string
+  # default     = "production"
+}

@@ -3,20 +3,20 @@
 #   value       = "${module.folders.folders}"
 # }
 
-output "folder-ids" {
-  description = "Folder ids."
-  value       = module.folders.ids
-}
+# output "folder-ids" {
+#   description = "Folder ids."
+#   value       = module.folders.ids
+# }
 
 # output "folder-names" {
 #   description = "Folder names."
 #   value       = "${module.folders.names}"
 # }
 
-output "folders-ids_list" {
-  description = "List of folder ids."
-  value       = module.folders.ids_list
-}
+# output "folders-ids_list" {
+#   description = "List of folder ids."
+#   value       = module.folders.ids_list
+# }
 
 # output "folder-names_list" {
 #   description = "List of folder names."
@@ -26,6 +26,11 @@ output "folders-ids_list" {
 output "default-project-name" {
   description = "Project name"
   value       = module.projects.default-project-name
+}
+
+output "default-project-folder" {
+  description = "Project ID"
+  value       = module.projects.default-project-folder
 }
 
 output "default-project-id" {
@@ -41,6 +46,11 @@ output "no-vpc-project-name" {
 output "no-vpc-project-id" {
   description = "Project ID"
   value       = module.projects.project-no-vpc-project-id
+}
+
+output "no-vpc-project-folder" {
+  description = "default-project-folder"
+  value       = module.projects.no-vpc-project-folder
 }
 
 # output "project-org-id" {
