@@ -18,20 +18,20 @@ output "id" {
 #   value       = google_folder.folders
 # }
 
-# output "ids" {
-#   description = "Folder ids."
-#   value       = zipmap(var.names, slice(google_folder.folders[*].name, 0, length(var.names)))
-# }
+output "ids" {
+  description = "Folder ids."
+  value       = zipmap(var.names, slice(google_folder.folders[*].name, 0, length(var.names)))
+}
 
 # output "names" {
 #   description = "Folder names."
 #   value       = zipmap(var.names, slice(google_folder.folders[*].display_name, 0, length(var.names)))
 # }
 
-# # output "ids_list" {
-# #   description = "List of folder ids."
-# #   value       = module.folders.google_folder.folders[*].name
-# # }
+output "ids_list" {
+  description = "List of folder ids."
+  value       = google_folder.folders[*].name
+}
 
 # output "names_list" {
 #   description = "List of folder names."
