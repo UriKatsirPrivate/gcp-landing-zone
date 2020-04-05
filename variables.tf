@@ -78,34 +78,34 @@ variable "subnets" {
 
 variable "ssh_source_ranges" {
   description = "List of IP CIDR ranges for tag-based SSH rule, defaults to 0.0.0.0/0."
-  default     = ["0.0.0.0/0"]
+  # default     = ["0.0.0.0/0"]
 }
 variable "http_source_ranges" {
   description = "List of IP CIDR ranges for tag-based HTTP rule, defaults to 0.0.0.0/0."
-  default     = ["0.0.0.0/0"]
+  # default     = ["0.0.0.0/0"]
 }
 
 variable "https_source_ranges" {
   description = "List of IP CIDR ranges for tag-based HTTPS rule, defaults to 0.0.0.0/0."
-  default     = ["0.0.0.0/0"]
+  # default     = ["0.0.0.0/0"]
 }
 
 variable "billing_account" {
   type        = string
   description = "Billing account for the project"
-  default     = "013FD1-9B204A-8B60C7"
+  # default     = "013FD1-9B204A-8B60C7"
 }
 
 variable "project-name-no-vpc" {
   description = "Project name for the new project without a default vpc"
   type        = string
-  default     = "No Default VPC"
+  # default     = "No Default VPC"
 }
 
 variable "project-name" {
   description = "Project name for the new project with a default vpc"
   type        = string
-  default     = "Default VPC"
+  # default     = "Default VPC"
 }
 
 # variable "folder-id-no-vpc" {

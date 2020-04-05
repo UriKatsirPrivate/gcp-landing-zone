@@ -3,8 +3,9 @@
 
 ## Prerequisites
 1) Account created
-2) Organization configured
-3) Service account with the following roles.
+2) [Organization configured](https://cloud.google.com/resource-manager/docs/creating-managing-organization)
+3) [Billing Account](https://cloud.google.com/billing/docs/how-to/manage-billing-account)
+4) Service account with the following roles.
 <!-- 4) Cloud Resource Manager API is activated (https://console.developers.google.com/apis/api/cloudresourcemanager.googleapis.com/overview?project=<Project ID>) -->
 
 ## Usage

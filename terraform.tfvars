@@ -39,4 +39,14 @@ subnets = [
   }
 ]
 
+# Firewall rules
+ssh_source_ranges   = ["0.0.0.0/0"]
+http_source_ranges  = ["0.0.0.0/0"]
+https_source_ranges = ["0.0.0.0/0"]
 
+/******************************************
+  Project settings
+******************************************/
+billing_account     = "013FD1-9B204A-8B60C7"
+project-name-no-vpc = "No Default VPC"
+project-name        = "Default VPC"
