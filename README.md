@@ -1,5 +1,13 @@
 # gcp-landing-zone
- A solution that helps customers quickly set up a secure, multi-project GCP environment based on GCP best practices
+A solution that helps customers quickly set up a secure, multi-project GCP environment based on GCP best practices.
+Inspired by [terraform-google-bootstrap](https://github.com/terraform-google-modules/terraform-google-bootstrap), [terraform-google-folders](https://github.com/terraform-google-modules/terraform-google-folders) and [terraform-google-project-factory](https://github.com/terraform-google-modules/terraform-google-project-factory)
+
+## What will be created?
+Using the default values, the following will be created:
+1) Three folders. (development, test and production).
+2) Two projects. One with default VPC and one with a custom VPC. <br/>
+    2.1) You can set under which folder each folder will be created by setting the 'folder-name' and 'folder-name-no-vpc' values
+3) Three firewall rules for the project with the custom VPC to allow ssh, http and https traffic.
 
 ## Prerequisites
 1) Account created
@@ -12,21 +20,26 @@
 1. [Configure GCP providers](https://learn.hashicorp.com/terraform/gcp/build#configuration). <br/>
     1.1 See [connections.tf](https://github.com/UriKatsirPrivate/terraform-lil/blob/master/connections.tf) for a sample file containing config information for GCP. <br/>
     1.2 You can use the json file downloaded for GCP as is. <br/>
+2. Create a terraform.tfvars files with your values. See table below for details. You can see sample values in terraform.tfvars.sample file.
+
 
 ## Inputs
-Replace the values in terraform.tfvars files with your values. See table below for details
-
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
+| folder-names | Folder names | array | ["development", "test", "production"] | yes |
 | parent | The resource name of the parent Folder or Organization. Must be of the form folders/folder_id or organizations/org_id | string | n/a | yes |
-| folder-names | Folder names | array | n/a | yes |
-| prefix | Optional prefix to enforce uniqueness of folder names. | string | empty | no |
+| network_name | The name of the VPC to create in the non-default project | string | n/a | yes |
 | subnets | The list of subnets being created | list(map(string)) | n/a | yes |
-| subnets | The list of subnets being created | list(map(string)) | n/a | yes |
-
+| ssh_source_ranges | The firewall will apply only to traffic that has source IP address in these ranges  | array | ["0.0.0.0/0"] | yes |
+| http_source_ranges | The firewall will apply only to traffic that has source IP address in these ranges  | array | ["0.0.0.0/0"] | yes |
+| https_source_ranges | The firewall will apply only to traffic that has source IP address in these ranges  | array | ["0.0.0.0/0"] | yes |
+| billing_account | Billing account to associate with the projects | string | n/a | yes |
+| project-name-no-vpc | Project name for the project without the default VPC | string | No Default VPC | yes |
+| project-name | Project name for the project with the default VPC | string | Default VPC | yes |
+| folder-name | Folder name for the project with the default VPC | string | development | yes |
+| folder-name-no-vpc | Folder name for the project without the default VPC | string | development | yes |
 
 
 ## To-do
 1. explore enabling [security services](https://cloud.google.com/security/products) <br/>
-    3.1 The above should be driven by a boolean flag that the user can set
-2. Move default values into a terraform.tfvars file    
+    1.1 The above should be driven by a boolean flag that the user can set
