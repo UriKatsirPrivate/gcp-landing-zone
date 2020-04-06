@@ -26,7 +26,7 @@ Using the default values, the following will be created:
 ## Input
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| folder-names | Folder names | array | ["development", "test", "production"] | yes |
+| folder-names | Folder names the will be created | array | ["development", "test", "production"] | yes |
 | parent | The resource name of the parent Folder or Organization. Must be of the form folders/folder_id or organizations/org_id | string | n/a | yes |
 | network_name | The name of the VPC to create in the non-default project | string | n/a | yes |
 | subnets | The list of subnets being created | list(map(string)) | n/a | yes |
