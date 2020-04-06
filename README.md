@@ -8,6 +8,7 @@ Using the default values, the following will be created:
 2) Two projects. One with default VPC and one with a custom VPC. <br/>
     2.1) You can set under which folder each project will be created by setting the 'folder-name' and 'folder-name-no-vpc' values.
 3) Three firewall rules for the project with the custom VPC to allow ssh, http and https traffic.
+4) See [diagram](https://github.com/UriKatsirPrivate/gcp-landing-zone/blob/master/docs/Landing%20Zone.pdf) for high level overview.
 
 ## Prerequisites
 1) GCP account.
