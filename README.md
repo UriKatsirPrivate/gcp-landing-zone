@@ -10,7 +10,7 @@ Using the default values, the following will be created:
 3) The custom VPC will have: <br/>
     3.1) Three firewall rules for the project with the custom VPC to allow ssh, http and https traffic. <br/>
     3.2) No Subnets. <br/>
-        3.2.1) You can enable the "subnets" module in main.tf. This will create three subnets (us-east1, us-west1 and europe-west1 regions). <br/>
+    3.3) You can enable the "subnets" module in main.tf. This will create three subnets (us-east1, us-west1 and europe-west1 regions). <br/>
 4) Enforce the "Restrict Public IP access on Cloud SQL instances" [organization policy](https://cloud.google.com/resource-manager/docs/organization-policy/org-policy-constraints).
 5) See [diagram](https://github.com/UriKatsirPrivate/gcp-landing-zone/blob/master/docs/LandingZone.pdf) for high level overview.
 
