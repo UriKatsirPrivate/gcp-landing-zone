@@ -43,6 +43,7 @@ Using the default values, the following will be created:
 | project-name | Project name for the project with the default VPC | string | Default VPC | yes |
 | folder-name | Folder name for the project with the default VPC | string | development | yes |
 | folder-name-no-vpc | Folder name for the project without the default VPC | string | development | yes |
+| organization-id | organization id | string | n/a | yes |
 
 
 ## To-do
