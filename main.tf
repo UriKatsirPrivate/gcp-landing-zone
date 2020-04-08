@@ -25,12 +25,12 @@ module "vpc" {
   # description             = var.description
 }
 
-module "subnets" {
-  source       = "./modules/subnets"
-  project_id   = "${module.projects.project-no-vpc-project-id}"
-  network_name = "${module.vpc.network_name}"
-  subnets      = var.subnets
-}
+# module "subnets" {
+#   source       = "./modules/subnets"
+#   project_id   = "${module.projects.project-no-vpc-project-id}"
+#   network_name = "${module.vpc.network_name}"
+#   subnets      = var.subnets
+# }
 
 module "firewall" {
   source              = "./modules/firewall"

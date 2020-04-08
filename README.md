@@ -7,7 +7,10 @@ Using the default values, the following will be created:
 1) Three folders. (development, test and production).
 2) Two projects. One with default VPC and one with a custom VPC. <br/>
     2.1) You can set under which folder each project will be created by setting the 'folder-name' and 'folder-name-no-vpc' values.
-3) Three firewall rules for the project with the custom VPC to allow ssh, http and https traffic.
+3) The custom VPC will have: <br/>
+    3.1) Three firewall rules for the project with the custom VPC to allow ssh, http and https traffic. <br/>
+    3.2) No Subnets. <br/>
+        3.2.1) You can enable the "subnets" module in main.tf. This will create three subnets (us-east1, us-west1 and europe-west1 regions). <br/>
 4) Enforce the "Restrict Public IP access on Cloud SQL instances" [organization policy](https://cloud.google.com/resource-manager/docs/organization-policy/org-policy-constraints).
 5) See [diagram](https://github.com/UriKatsirPrivate/gcp-landing-zone/blob/master/docs/LandingZone.pdf) for high level overview.
 
