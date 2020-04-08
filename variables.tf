@@ -125,3 +125,8 @@ variable "folder-name-no-vpc" {
   type        = string
   # default     = "production"
 }
+
+variable "organization-id" {
+  description = "Organization ID"
+  type        = string
+}

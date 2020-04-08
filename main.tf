@@ -41,6 +41,12 @@ module "firewall" {
   https_source_ranges = var.https_source_ranges
 }
 
+module "organization-policies" {
+  source     = "./modules/OrganizationPolicies/"
+  organization-id     = var.organization-id
+  constraint = "sql.restrictPublicIp"
+}
+
 resource "random_string" "random" {
   length           = 11
   special          = false
