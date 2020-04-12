@@ -25,7 +25,8 @@ Using the default values, the following will be created:
 ## Usage
 1. [Configure GCP provider](https://learn.hashicorp.com/terraform/gcp/build#configuration). <br/>
     1.1 See [connections.tf](https://github.com/UriKatsirPrivate/gcp-landing-zone/blob/master/connections.tf) for a sample file containing config information for GCP. <br/>
-    1.2 You can use the json file downloaded for GCP as is. <br/>
+    1.2 You can use the json file downloaded from GCP as is. <br/>
+    1.3 Put the json file downloaded from GCP into the "security" folder. <br/>
 2. Create a terraform.tfvars files with your values. See table below for details. You can see sample values in [terraform.tfvars.sample](https://github.com/UriKatsirPrivate/gcp-landing-zone/blob/master/terraform.tfvars.sample) file.
 
 

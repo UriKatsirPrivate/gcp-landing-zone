@@ -44,7 +44,7 @@ https_source_ranges = ["0.0.0.0/0"]
   Project settings
 ******************************************/
 billing_account     = "<Your billing account>"
-project-name-no-vpc = "No Default VPC"
+project-name-no-vpc = "Custom VPC"
 project-name        = "Default VPC"
 
 /* Folder name to create the projects in.
