@@ -12,7 +12,8 @@ Using the default values, the following will be created:
     3.2) No Subnets. <br/>
     3.3) You can enable the "subnets" module in main.tf. This will create three subnets (us-east1, us-west1 and europe-west1 regions). <br/>
 4) Enforce the "Restrict Public IP access on Cloud SQL instances" [organization policy](https://cloud.google.com/resource-manager/docs/organization-policy/org-policy-constraints).
-5) See [diagram](https://github.com/UriKatsirPrivate/gcp-landing-zone/blob/master/docs/LandingZone.pdf) for high level overview.
+5) See [diagram](https://github.com/UriKatsirPrivate/gcp-landing-zone/blob/master/docs/LandingZone.pdf) for high level overview. <br/>
+** NOTE: The diagram shows the structure that will be created using the default values in [terraform.tfvars.sample](https://github.com/UriKatsirPrivate/gcp-landing-zone/blob/master/terraform.tfvars.sample) file. You cam modify the result by changing the input values.
 
 ## Prerequisites
 1) GCP account.
