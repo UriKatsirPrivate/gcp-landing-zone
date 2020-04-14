@@ -42,10 +42,17 @@ module "firewall" {
 }
 
 module "organization-policies" {
-  source     = "./modules/OrganizationPolicies/"
-  organization-id     = var.organization-id
-  constraint = "sql.restrictPublicIp"
+  source          = "./modules/OrganizationPolicies/"
+  organization-id = var.organization-id
+  constraint      = "sql.restrictPublicIp"
 }
+
+module "iam-audit-config" {
+  source = "./modules/IamAuditConfig/"
+  org_id = var.organization-id
+}
+
+
 
 resource "random_string" "random" {
   length           = 11
