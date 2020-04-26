@@ -51,6 +51,14 @@ Using the default values, the following will be created:
 
 ## To-do
 1. Review [Organization Policy Constraints](https://cloud.google.com/resource-manager/docs/organization-policy/org-policy-constraints) to explore enabling additional policies by default.
-2. Explore enabling [security services](https://cloud.google.com/security/products). <br/>
-    2.1 The above should be driven by a boolean flag that the user can set.<br/>
-    2.2 Use [google_project_service](https://www.terraform.io/docs/providers/google/r/google_project_service.html) to enable API services.
+2. Explore setting up pre-built solutions like:<br/>
+    2.1 [Sending notifications for Google Cloud events](https://cloud.google.com/solutions/sending-notifications-for-google-cloud-events) <br/>
+    2.2 The above should be driven by a boolean flag that the user can set.<br/>
+3. Explore enabling [security services](https://cloud.google.com/security/products). <br/>
+    3.1 The above should be driven by a boolean flag that the user can set.<br/>
+    3.2 Use [google_project_service](https://www.terraform.io/docs/providers/google/r/google_project_service.html) to enable API services.
+4. Enable [Event Threat Detection](https://cloud.google.com/event-threat-detection).<br/>
+    4.1 The above should be driven by a boolean flag that the user can set.<br/>
+5. Look at [Enterprise onboarding checklist](https://cloud.google.com/docs/enterprise/onboarding-checklist) and [Best practices for enterprise organizations](https://cloud.google.com/docs/enterprise/best-practices-for-enterprise-organizations) for potential additions.
+
+    
