@@ -60,5 +60,4 @@ Using the default values, the following will be created:
 4. Enable [Event Threat Detection](https://cloud.google.com/event-threat-detection).<br/>
     4.1 The above should be driven by a boolean flag that the user can set.<br/>
 5. Look at [Enterprise onboarding checklist](https://cloud.google.com/docs/enterprise/onboarding-checklist) and [Best practices for enterprise organizations](https://cloud.google.com/docs/enterprise/best-practices-for-enterprise-organizations) for potential additions.
-
-    
+6. look at [best practices doc](http://go/gcp-security-bp) (and [here](http://go/gcp-security-bp-doc)) for further controls to enable.
