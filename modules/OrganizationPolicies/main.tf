@@ -16,13 +16,13 @@ resource "google_organization_policy" "compute-disableSerialPortAccess" {
   }
 }
 
-resource "google_organization_policy" "services_policy" {
-  org_id     = var.organization-id
-  constraint = "compute.vmExternalIpAccess"
+# resource "google_organization_policy" "services_policy" {
+#   org_id     = var.organization-id
+#   constraint = "compute.vmExternalIpAccess"
 
-  list_policy {
-    deny {
-      all = true
-    }
-  }
-}
+#   list_policy {
+#     deny {
+#       all = true
+#     }
+#   }
+# }
