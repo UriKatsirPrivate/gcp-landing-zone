@@ -1,5 +1,5 @@
 # Init Terraform and providers
-terraform init
+terraform init  -upgrade
 
 # Format the tf files
 terraform fmt 

@@ -8,9 +8,9 @@ module "folders" {
 module "projects" {
   source              = "./modules/projects/"
   folder-id           = lookup(tomap(module.folders.ids), var.folder-name, module.folders.ids_list[0])
-  project-id          = "${random_string.random.result}"
+  project-id          = random_string.random.result
   project-name        = var.project-name
-  project-id-no-vpc   = "${random_string.random-no-vpc.result}"
+  project-id-no-vpc   = random_string.random-no-vpc.result
   folder-id-no-vpc    = lookup(tomap(module.folders.ids), var.folder-name-no-vpc, module.folders.ids_list[0])
   project-name-no-vpc = var.project-name-no-vpc
   billing_account     = var.billing_account
@@ -21,7 +21,7 @@ module "vpc" {
   network_name            = var.network_name
   auto_create_subnetworks = var.auto_create_subnetworks
   routing_mode            = var.routing_mode
-  project_id              = "${module.projects.project-no-vpc-project-id}"
+  project_id              = module.projects.seed_project_id
   # description             = var.description
 }
 
@@ -35,8 +35,8 @@ module "vpc" {
 module "firewall" {
   source              = "./modules/firewall"
   ssh_source_ranges   = var.ssh_source_ranges
-  network             = "${module.vpc.network_name}"
-  project_id          = "${module.projects.project-no-vpc-project-id}"
+  network             = module.vpc.network_name
+  project_id          = module.projects.seed_project_id
   http_source_ranges  = var.http_source_ranges
   https_source_ranges = var.https_source_ranges
 }

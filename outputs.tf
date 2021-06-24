@@ -23,35 +23,35 @@
 #   value       = "${module.folders.names_list}"
 # }
 
-output "default-project-name" {
-  description = "Project name"
-  value       = module.projects.default-project-name
-}
+# output "default-project-name" {
+#   description = "Project name"
+#   value       = module.projects.default-project-name
+# }
 
-output "default-project-folder" {
-  description = "Project ID"
-  value       = module.projects.default-project-folder
-}
+# output "default-project-folder" {
+#   description = "Project ID"
+#   value       = module.projects.default-project-folder
+# }
 
-output "default-project-id" {
-  description = "Project ID"
-  value       = module.projects.default-project-id
-}
+# output "default-project-id" {
+#   description = "Project ID"
+#   value       = module.projects.default-project-id
+# }
 
-output "no-vpc-project-name" {
-  description = "Project ID"
-  value       = module.projects.project-no-vpc-project-name
-}
+# output "no-vpc-project-name" {
+#   description = "Project ID"
+#   value       = module.projects.project-no-vpc-project-name
+# }
 
-output "no-vpc-project-id" {
-  description = "Project ID"
-  value       = module.projects.project-no-vpc-project-id
-}
+# output "no-vpc-project-id" {
+#   description = "Project ID"
+#   value       = module.projects.project-no-vpc-project-id
+# }
 
-output "no-vpc-project-folder" {
-  description = "default-project-folder"
-  value       = module.projects.no-vpc-project-folder
-}
+# output "no-vpc-project-folder" {
+#   description = "default-project-folder"
+#   value       = module.projects.no-vpc-project-folder
+# }
 
 # output "project-org-id" {
 #   description = "Org ID"
