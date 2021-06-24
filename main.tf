@@ -14,6 +14,7 @@ module "projects" {
   folder-id-no-vpc    = lookup(tomap(module.folders.ids), var.folder-name-no-vpc, module.folders.ids_list[0])
   project-name-no-vpc = var.project-name-no-vpc
   billing_account     = var.billing_account
+  activate_apis       = var.activate_apis
 }
 
 module "default-vpc" {

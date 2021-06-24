@@ -22,7 +22,7 @@ module "seed_project" {
   folder_id                   = var.folder-id
   org_id                      = "910206293951"
   billing_account             = var.billing_account
-  activate_apis               = ["compute.googleapis.com","iam.googleapis.com","sql-component.googleapis.com", "bigquery.googleapis.com"]
+  activate_apis               = var.activate_apis
   # labels                      = var.project_labels
 }
 
@@ -35,6 +35,6 @@ module "seed_project-no-vpc" {
   folder_id                   = var.folder-id-no-vpc
   org_id                      = "910206293951"
   billing_account             = var.billing_account
-  activate_apis               = ["compute.googleapis.com","iam.googleapis.com","sql-component.googleapis.com", "bigquery.googleapis.com"]
+  activate_apis               = var.activate_apis
   # labels                      = var.project_labels
 }
