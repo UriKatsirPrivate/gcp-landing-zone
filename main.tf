@@ -16,26 +16,37 @@ module "projects" {
   billing_account     = var.billing_account
 }
 
-module "vpc" {
+module "default-vpc" {
   source                  = "./modules/vpc"
   network_name            = var.network_name
-  auto_create_subnetworks = var.auto_create_subnetworks
-  routing_mode            = var.routing_mode
-  project_id              = module.projects.seed_project_id
+  auto_create_subnetworks = true
+  # auto_create_subnetworks = var.auto_create_subnetworks
+  routing_mode = var.routing_mode
+  project_id   = module.projects.seed_project_id
   # description             = var.description
 }
 
-# module "subnets" {
-#   source       = "./modules/subnets"
-#   project_id   = "${module.projects.project-no-vpc-project-id}"
-#   network_name = "${module.vpc.network_name}"
-#   subnets      = var.subnets
-# }
+module "custom-vpc" {
+  source                  = "./modules/vpc"
+  network_name            = var.network_name
+  auto_create_subnetworks = false
+  # auto_create_subnetworks = var.auto_create_subnetworks
+  routing_mode = var.routing_mode
+  project_id   = module.projects.seed_project_id-no-vpc
+  # description             = var.description
+}
+
+module "custom-subnets" {
+  source       = "./modules/subnets"
+  project_id   = module.projects.seed_project_id-no-vpc
+  network_name = module.custom-vpc.network_name
+  subnets      = var.subnets
+}
 
 module "firewall" {
   source              = "./modules/firewall"
   ssh_source_ranges   = var.ssh_source_ranges
-  network             = module.vpc.network_name
+  network             = module.default-vpc.network_name
   project_id          = module.projects.seed_project_id
   http_source_ranges  = var.http_source_ranges
   https_source_ranges = var.https_source_ranges

@@ -50,7 +50,7 @@ output "no-vpc-project-id" {
 
 output "network-name" {
   description = "VPC name"
-  value       = module.vpc.network_name
+  value       = module.default-vpc.network_name
 }
 
 
