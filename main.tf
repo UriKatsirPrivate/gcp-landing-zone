@@ -37,12 +37,12 @@ module "custom-vpc" {
   # description             = var.description
 }
 
-module "custom-subnets" {
-  source       = "./modules/subnets"
-  project_id   = module.projects.seed_project_id-no-vpc
-  network_name = module.custom-vpc.network_name
-  subnets      = var.subnets
-}
+# module "custom-subnets" {
+#   source       = "./modules/subnets"
+#   project_id   = module.projects.seed_project_id-no-vpc
+#   network_name = module.custom-vpc.network_name
+#   subnets      = var.subnets
+# }
 
 module "firewall" {
   source              = "./modules/firewall"

@@ -8,9 +8,10 @@ Using the default values, the following will be created:
 2) Two projects. One with default VPC and one with a custom VPC. <br/>
     2.1) You can set under which folder each project will be created by setting the 'folder-name' and 'folder-name-no-vpc' values.
 3) The custom VPC will have: <br/>
-    3.1) Three firewall rules for the project with the custom VPC to allow ssh, http and https traffic. <br/>
-    3.2) No Subnets. <br/>
+    3.1) No Subnets. <br/>
     3.3) You can enable the "subnets" module in main.tf. This will create three subnets (us-east1, us-west1 and europe-west1 regions). <br/>
+3.5) The default VPC will have:<br/>
+    3.5.1)Three firewall rules for the project with the custom VPC to allow ssh, http and https traffic. <br/>
 4) Enforce the following [organization policies](https://cloud.google.com/resource-manager/docs/organization-policy/org-policy-constraints): <br/>
     4.1 Restrict Public IP access on Cloud SQL instances.<br/>
     4.2 Disable VM serial port access. <br/>

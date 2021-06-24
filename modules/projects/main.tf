@@ -13,7 +13,7 @@
 #   billing_account     = var.billing_account
 # }
 
-module "seed_project" {
+module "seed_project-default-vpc" {
   source                      = "terraform-google-modules/project-factory/google"
   version                     = "~> 10.1.1"
   name                        = var.project-name
@@ -26,7 +26,7 @@ module "seed_project" {
   # labels                      = var.project_labels
 }
 
-module "seed_project-no-vpc" {
+module "seed_project-custom-vpc" {
   source                      = "terraform-google-modules/project-factory/google"
   version                     = "~> 10.1.1"
   name                        = var.project-name-no-vpc

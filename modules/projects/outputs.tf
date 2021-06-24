@@ -37,22 +37,22 @@
 
 output "seed_project_id" {
   description = "Project where service accounts and core APIs will be enabled."
-  value       = module.seed_project.project_id
+  value       = module.seed_project-default-vpc.project_id
 }
 
 output "seed_project_id-no-vpc" {
   description = "Project where service accounts and core APIs will be enabled."
-  value       = module.seed_project-no-vpc.project_id
+  value       = module.seed_project-custom-vpc.project_id
 }
 
 output "seed_project_name" {
   description = "Project where service accounts and core APIs will be enabled."
-  value       = module.seed_project.project_name
+  value       = module.seed_project-default-vpc.project_name
 }
 
 output "seed_project_name-no-vpc" {
   description = "Project where service accounts and core APIs will be enabled."
-  value       = module.seed_project-no-vpc.project_name
+  value       = module.seed_project-custom-vpc.project_name
 }
 
 
