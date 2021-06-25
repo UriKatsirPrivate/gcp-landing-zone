@@ -148,6 +148,7 @@ variable "activate_apis" {
     "appengine.googleapis.com",
     "storage-api.googleapis.com",
     "monitoring.googleapis.com",
-    "sql-component.googleapis.com"
+    "sql-component.googleapis.com",
+    "essentialcontacts.googleapis.com"
   ]
 }
