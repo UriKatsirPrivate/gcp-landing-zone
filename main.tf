@@ -15,6 +15,7 @@ module "projects" {
   project-name-no-vpc = var.project-name-no-vpc
   billing_account     = var.billing_account
   activate_apis       = var.activate_apis
+  organization-id     = var.organization-id
 }
 
 module "default-vpc" {

@@ -20,7 +20,7 @@ module "seed_project-default-vpc" {
   random_project_id           = "true"
   disable_services_on_destroy = false
   folder_id                   = var.folder-id
-  org_id                      = "910206293951"
+  org_id                      = var.organization-id
   billing_account             = var.billing_account
   activate_apis               = var.activate_apis
   # labels                      = var.project_labels
@@ -33,7 +33,7 @@ module "seed_project-custom-vpc" {
   random_project_id           = "true"
   disable_services_on_destroy = false
   folder_id                   = var.folder-id-no-vpc
-  org_id                      = "910206293951"
+  org_id                      = var.organization-id
   billing_account             = var.billing_account
   activate_apis               = var.activate_apis
   # labels                      = var.project_labels

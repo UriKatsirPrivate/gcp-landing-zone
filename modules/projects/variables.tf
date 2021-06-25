@@ -72,3 +72,8 @@ variable "billing_account" {
   description = "Billing account for the project"
 }
 
+variable "organization-id" {
+  description = "Organization ID"
+  type        = string
+}
+
