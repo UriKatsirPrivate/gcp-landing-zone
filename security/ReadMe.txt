@@ -1,1 +1,1 @@
-Put your json key in this folder
+Put your json key in this folder.
