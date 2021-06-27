@@ -2,7 +2,10 @@
 terraform init  -upgrade
 
 # Format the tf files
-terraform fmt 
+terraform fmt
+
+# Check the configuration
+terraform validate
 
 # Run the 'plan' command and initialize the variable
 terraform plan -var-file="terraform.tfvars"
