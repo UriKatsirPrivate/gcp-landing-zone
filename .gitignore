@@ -35,3 +35,4 @@ terraform.tfvars
 .DS_Store
 .terraform.lock.hcl
 plan.json
+destroy-plan.json
