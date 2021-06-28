@@ -2,7 +2,7 @@
 terraform init  -upgrade
 
 # Format the tf files
-terraform fmt
+terraform fmt -recursive
 
 # Check the configuration
 terraform validate
