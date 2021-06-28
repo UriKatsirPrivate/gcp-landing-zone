@@ -34,3 +34,4 @@ override.tf.json
 terraform.tfvars
 .DS_Store
 .terraform.lock.hcl
+plan.json
