@@ -135,22 +135,7 @@ variable "activate_apis" {
   description = "List of APIs to enable in the seed project."
   type        = list(string)
 
-  default = [
-    "serviceusage.googleapis.com",
-    "servicenetworking.googleapis.com",
-    "compute.googleapis.com",
-    "logging.googleapis.com",
-    "bigquery.googleapis.com",
-    "cloudresourcemanager.googleapis.com",
-    "cloudbilling.googleapis.com",
-    "iam.googleapis.com",
-    "admin.googleapis.com",
-    "appengine.googleapis.com",
-    "storage-api.googleapis.com",
-    "monitoring.googleapis.com",
-    "sql-component.googleapis.com",
-    "essentialcontacts.googleapis.com"
-  ]
+  default = []
 }
 
 variable "constraint_names" {
