@@ -12,12 +12,12 @@ Using the default values, the following will be created:
     3.3) You can enable the "subnets" module in main.tf. This will create three subnets (us-east1, us-west1 and europe-west1 regions). <br/>
 3.5) The default VPC will have:<br/>
     3.5.1)Three firewall rules for the project with the custom VPC to allow ssh, http and https traffic. <br/>
-4) Enforce the following [organization policies](https://cloud.google.com/resource-manager/docs/organization-policy/org-policy-constraints): <br/>
-    4.1 Restrict Public IP access on Cloud SQL instances.<br/>
-    4.2 Disable VM serial port access. <br/>
+4) Enforce [organization policies](https://cloud.google.com/resource-manager/docs/organization-policy/org-policy-constraints): <br/>
+    4.1 Driven by the values in the constraint_names variable in .tfvars file<br/>
 5) Turn on IAM Audit Logs for Admin Reads. Admin read logs are [free of charge](https://cloud.google.com/audit-logs). 
 6) See [diagram](https://github.com/UriKatsirPrivate/gcp-landing-zone/blob/master/docs/LandingZone.pdf) for high level overview. <br/>
 ** NOTE: The diagram shows the structure that will be created using the default values in [terraform.tfvars.sample](https://github.com/UriKatsirPrivate/gcp-landing-zone/blob/master/terraform.tfvars.sample) file. You cam modify the result by changing the input values.
+7) Enable [Cloud Asset Inventory](https://cloud.google.com/asset-inventory) service. (Free service)
 
 ## Prerequisites
 1) GCP account.
@@ -60,7 +60,4 @@ Using the default values, the following will be created:
 3. Explore enabling [security services](https://cloud.google.com/security/products). <br/>
     3.1 The above should be driven by a boolean flag that the user can set.<br/>
     3.2 Use [google_project_service](https://www.terraform.io/docs/providers/google/r/google_project_service.html) to enable API services.
-4. Enable [Event Threat Detection](https://cloud.google.com/event-threat-detection).<br/>
-    4.1 The above should be driven by a boolean flag that the user can set.<br/>
-5. Look at [Enterprise onboarding checklist](https://cloud.google.com/docs/enterprise/onboarding-checklist) ([internal link](go/bedrock-checklist)) and [Best practices for enterprise organizations](https://cloud.google.com/docs/enterprise/best-practices-for-enterprise-organizations) for potential additions.
-6. look at [best practices doc](http://go/gcp-security-bp) (and [here](http://go/gcp-security-bp-doc)) for further controls to enable.
+4. look at [best practices doc](http://go/gcp-security-bp) (and [here](http://go/gcp-security-bp-doc)) for further controls to enable.
