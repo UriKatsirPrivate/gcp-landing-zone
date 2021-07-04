@@ -55,3 +55,12 @@ folder-name        = "development"
 folder-name-no-vpc = "prod"
 
 organization-id= <Your Organization ID>
+
+//Organization policies that will be enabled. Full list is here: https://cloud.google.com/resource-manager/docs/organization-policy/org-policy-constraints
+constraint_names = [
+  "iam.disableServiceAccountCreation",
+  "iam.disableServiceAccountKeyUpload",
+  "compute.disableSerialPortAccess",
+  "sql.restrictPublicIp",
+  "storage.uniformBucketLevelAccess"
+]
