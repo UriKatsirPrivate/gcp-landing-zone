@@ -152,3 +152,7 @@ variable "activate_apis" {
     "essentialcontacts.googleapis.com"
   ]
 }
+
+variable "constraint_names" {
+  type = list(any)
+}

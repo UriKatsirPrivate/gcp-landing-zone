@@ -55,9 +55,10 @@ module "firewall" {
 }
 
 module "organization-policies" {
-  source          = "./modules/OrganizationPolicies/"
-  organization-id = var.organization-id
-  constraint      = "sql.restrictPublicIp"
+  source           = "./modules/OrganizationPolicies/"
+  organization-id  = var.organization-id
+  constraint       = "sql.restrictPublicIp"
+  constraint_names = var.constraint_names
 }
 
 module "iam-audit-config" {
