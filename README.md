@@ -6,7 +6,8 @@ Inspired by [terraform-google-bootstrap](https://github.com/terraform-google-mod
 Using the default values, the following will be created:
 1) Three folders. (development, test and production).
 2) Two projects. One with default VPC and one with a custom VPC. <br/>
-    2.1) You can set under which folder each project will be created by setting the 'folder-name' and 'folder-name-no-vpc' values.
+    2.1) You can set under which folder each project will be created by setting the 'folder-name' and 'folder-name-no-vpc' values.<br/>
+    2.2) Attach the billing account to each project.
 3) The custom VPC will have: <br/>
     3.1) No Subnets. <br/>
     3.3) You can enable the "subnets" module in main.tf. This will create three subnets (us-east1, us-west1 and europe-west1 regions). <br/>
@@ -15,9 +16,9 @@ Using the default values, the following will be created:
 4) Enforce [organization policies](https://cloud.google.com/resource-manager/docs/organization-policy/org-policy-constraints): <br/>
     4.1 Driven by the values in the constraint_names variable in .tfvars file<br/>
 5) Turn on IAM Audit Logs for Admin Reads. Admin read logs are [free of charge](https://cloud.google.com/audit-logs). 
-6) See [diagram](https://github.com/UriKatsirPrivate/gcp-landing-zone/blob/master/docs/LandingZone.pdf) for high level overview. <br/>
+6) Enable [Cloud Asset Inventory](https://cloud.google.com/asset-inventory) service. (Free service)
+7) See [diagram](https://github.com/UriKatsirPrivate/gcp-landing-zone/blob/master/docs/LandingZone.pdf) for high level overview. <br/>
 ** NOTE: The diagram shows the structure that will be created using the default values in [terraform.tfvars.sample](https://github.com/UriKatsirPrivate/gcp-landing-zone/blob/master/terraform.tfvars.sample) file. You cam modify the result by changing the input values.
-7) Enable [Cloud Asset Inventory](https://cloud.google.com/asset-inventory) service. (Free service)
 
 ## Prerequisites
 1) GCP account.
