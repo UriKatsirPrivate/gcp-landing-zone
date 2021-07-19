@@ -12,7 +12,7 @@ Using the default values, the following will be created:
     3.1) No Subnets. <br/>
     3.3) You can enable the "subnets" module in main.tf. This will create three subnets (us-east1, us-west1 and europe-west1 regions). <br/>
 3.5) The default VPC will have:<br/>
-    3.5.1)Three firewall rules for the project with the custom VPC to allow ssh, http and https traffic. <br/>
+    3.5.1)Three firewall rules to allow ssh, http and https traffic. <br/>
 4) Enforce [organization policies](https://cloud.google.com/resource-manager/docs/organization-policy/org-policy-constraints): <br/>
     4.1 Driven by the values in the constraint_names variable in .tfvars file<br/>
 5) Turn on IAM Audit Logs for Admin Reads. Admin read logs are [free of charge](https://cloud.google.com/audit-logs). 
