@@ -61,3 +61,7 @@ Using the default values, the following will be created:
     3.1 The above should be driven by a boolean flag that the user can set.<br/>
     3.2 Use [google_project_service](https://www.terraform.io/docs/providers/google/r/google_project_service.html) to enable API services.
 4. look at [best practices doc](http://go/gcp-security-bp) (and [here](http://go/gcp-security-bp-doc)) for further controls to enable.
+
+## Further Reference
+1. [Export cloud resources created via the web UI to Terraform](https://cloud.google.com/sdk/gcloud/reference/beta/resource-config/bulk-export) <br/>
+1.1 Sample: Export Compute Instance for a given project: gcloud beta resource-config bulk-export --resource-format=terraform --resource-types=ComputeInstance --project=Your Project Name Here
