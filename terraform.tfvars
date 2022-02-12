@@ -52,13 +52,13 @@ The value should match one of the folder names specified above (folder-names var
 If no match found, project will be assigned a default folder*/
 
 folder-name        = "development"
-folder-name-no-vpc = "prod"
+folder-name-no-vpc = "production"
 
 organization-id = "993103645203"
 
 //Organization policies that will be enabled. Full list is here: https://cloud.google.com/resource-manager/docs/organization-policy/org-policy-constraints
 constraint_names = [
-  "iam.disableServiceAccountCreation",
+  # "iam.disableServiceAccountCreation",
   "iam.disableServiceAccountKeyUpload",
   "compute.disableSerialPortAccess",
   "sql.restrictPublicIp",
