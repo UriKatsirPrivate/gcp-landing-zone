@@ -31,7 +31,6 @@ override.tf.json
 # security folder
 /security/*.json
 .vscode/settings.json
-terraform.tfvars
 .DS_Store
 .terraform.lock.hcl
 plan.json
