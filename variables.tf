@@ -4,7 +4,7 @@ variable "parent" {
   # default     = "organizations/910206293951"
 }
 
-variable "folder-names" {
+variable "common-folder-names" {
   type        = list(string)
   description = "Folder names."
   # default     = ["development", "test", "production"]

@@ -1,7 +1,7 @@
 /******************************************
   Folder Creation
 ******************************************/
-folder-names = ["development", "test", "production"]
+common-folder-names = ["development", "non-production", "production"]
 
 # The resource name of the parent Folder or Organization.
 # Must be of the form folders/folder_id or organizations/org_id

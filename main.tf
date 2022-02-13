@@ -1,7 +1,7 @@
 module "folders" {
   source = "./modules/folders/"
   parent = var.parent
-  names  = var.folder-names
+  names  = var.common-folder-names
   # folders = var.folders
 }
 
