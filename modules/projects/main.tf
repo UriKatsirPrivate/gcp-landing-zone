@@ -111,3 +111,28 @@ module "org_billing_logs" {
     env_code          = "p"
   }
 }
+
+/******************************************
+  Project for Org-wide Secrets
+*****************************************/
+
+module "org_secrets" {
+  source            = "terraform-google-modules/project-factory/google"
+  version           = "~> 10.1"
+  random_project_id = "true"
+  name              = "common-secrets"
+  org_id            = var.organization-id
+  billing_account   = var.billing_account
+  folder_id         = var.common-folder-id
+  activate_apis     = ["logging.googleapis.com", "secretmanager.googleapis.com", "billingbudgets.googleapis.com"]
+
+  labels = {
+    environment       = "production"
+    application_name  = "org-secrets"
+    billing_code      = "1234"
+    primary_contact   = "example1"
+    secondary_contact = "example2"
+    business_code     = "abcd"
+    env_code          = "p"
+  }
+}
