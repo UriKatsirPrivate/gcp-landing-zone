@@ -90,3 +90,24 @@ module "org_audit_logs" {
     env_code          = "p"
   }
 }
+
+module "org_billing_logs" {
+  source            = "terraform-google-modules/project-factory/google"
+  version           = "~> 10.1"
+  random_project_id = "true"
+  name              = "common-billing-logs"
+  org_id            = var.organization-id
+  billing_account   = var.billing_account
+  folder_id         = var.common-folder-id
+  activate_apis     = ["logging.googleapis.com", "bigquery.googleapis.com", "billingbudgets.googleapis.com"]
+
+  labels = {
+    environment       = "production"
+    application_name  = "org-billing-logs"
+    billing_code      = "1234"
+    primary_contact   = "example1"
+    secondary_contact = "example2"
+    business_code     = "abcd"
+    env_code          = "p"
+  }
+}
