@@ -16,6 +16,7 @@ module "projects" {
   billing_account     = var.billing_account
   activate_apis       = var.activate_apis
   organization-id     = var.organization-id
+  common-folder-id    = module.folders.common-folder-id
 }
 
 module "default-vpc" {

@@ -8,6 +8,13 @@ output "id" {
   value       = google_folder.folders[0].id
 }
 
+output "common-folder-id" {
+  description = "Folder id (for single use)."
+  value       = google_folder.common-folder.id
+}
+
+
+
 # # output "name" {
 # #   description = "Folder name (for single use)."
 # #   value       = google_folder.folders[0].display_name

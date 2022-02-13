@@ -38,3 +38,30 @@ module "seed_project-custom-vpc" {
   activate_apis               = var.activate_apis
   # labels                      = var.project_labels
 }
+
+/******************************************
+  Project for SCC Notifications
+*****************************************/
+
+module "scc_notifications" {
+  source            = "terraform-google-modules/project-factory/google"
+  version           = "~> 10.1.1"
+  random_project_id = "true"
+  #  impersonate_service_account = var.terraform_service_account
+  #  default_service_account     = "deprivilege"
+  name            = "common-scc"
+  org_id          = var.organization-id
+  billing_account = var.billing_account
+  folder_id       = var.common-folder-id
+  activate_apis   = ["logging.googleapis.com", "pubsub.googleapis.com", "securitycenter.googleapis.com", "billingbudgets.googleapis.com"]
+
+  labels = {
+    environment       = "production"
+    application_name  = "org-scc"
+    billing_code      = "1234"
+    primary_contact   = "example1"
+    secondary_contact = "example2"
+    business_code     = "abcd"
+    env_code          = "p"
+  }
+}

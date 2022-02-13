@@ -38,6 +38,10 @@ variable "project-name" {
   type        = string
 }
 
+variable "common-folder-id" {
+  description = "Folder ID to create the common projects in"
+  type        = string
+}
 
 
 # variable "activate_apis" {
