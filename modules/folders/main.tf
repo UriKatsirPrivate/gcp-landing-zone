@@ -12,10 +12,16 @@
 # }
 
 
+resource "google_folder" "common-folder" {
+  display_name = "common"
+  parent       = var.parent
+}
+
 resource "google_folder" "folders" {
   count        = length(var.names)
   display_name = "${local.prefix}${element(var.names, count.index)}"
-  parent       = var.parent
+  parent       = google_folder.common-folder.name
+  #parent       = var.parent
 }
 
 locals {
