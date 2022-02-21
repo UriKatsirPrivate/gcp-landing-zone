@@ -4,7 +4,7 @@ Inspired by [terraform-google-bootstrap](https://github.com/terraform-google-mod
 
 ## What will be created?
 Using the default values, the following will be created:
-1) Three folders. (development, test and production).
+1) Three folders. (development, non-production and production).
 2) Two projects. One with default VPC and one with a custom VPC. <br/>
     2.1) You can set under which folder each project will be created by setting the 'folder-name' and 'folder-name-no-vpc' values.<br/>
     2.2) Attach the billing account to each project.
