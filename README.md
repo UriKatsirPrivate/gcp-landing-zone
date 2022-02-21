@@ -25,6 +25,7 @@ Using the default values, the following will be created:
 2) [Organization configured](https://cloud.google.com/resource-manager/docs/creating-managing-organization).
 3) [Billing Account](https://cloud.google.com/billing/docs/how-to/manage-billing-account).
 4) Organization level Service account with [these roles](https://github.com/UriKatsirPrivate/gcp-landing-zone/blob/master/docs/ServiceAccount.png).
+5) Perform steps in the [setup.pdf](https://github.com/UriKatsirPrivate/gcp-landing-zone/blob/master/docs/Setup.pdf) file.
 
 ## Usage
 1. [Configure GCP provider](https://learn.hashicorp.com/terraform/gcp/build#configuration). <br/>
@@ -32,6 +33,7 @@ Using the default values, the following will be created:
     1.2 NO NEED to use a service account key. <br/>
     1.3 execute <i>gcloud auth application-default login</i> command in a terminal prior to running the modules <br/>
 2. Create a terraform.tfvars files with your values. See table below for details. You can see sample values in [terraform.tfvars.sample](https://github.com/UriKatsirPrivate/gcp-landing-zone/blob/master/terraform.tfvars.sample) file.
+3. Run starter.sh to create the infrastructure.
 
 
 ## Input
@@ -51,6 +53,8 @@ Using the default values, the following will be created:
 | folder-name-no-vpc | Folder name for the project without the default VPC | string | development | yes |
 | organization-id | organization id | string | n/a | yes |
 
+## Cleanup
+1. Run destroy.sh to delete all created services.
 
 ## To-do
 1. Review [Organization Policy Constraints](https://cloud.google.com/resource-manager/docs/organization-policy/org-policy-constraints) to explore enabling additional policies by default.
