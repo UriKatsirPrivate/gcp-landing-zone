@@ -31,7 +31,7 @@ Using the default values, the following will be created:
 1. [Configure GCP provider](https://learn.hashicorp.com/terraform/gcp/build#configuration). <br/>
     1.1 See [connections.tf](https://github.com/UriKatsirPrivate/gcp-landing-zone/blob/master/connections.tf) for a sample file containing config information for GCP. <br/>
     1.2 NO NEED to use a service account key. <br/>
-    1.3 execute <i>gcloud auth application-default login</i> command in a terminal prior to running the modules <br/>
+    1.3 execute <i>gcloud auth application-default login</i> or <i>gcloud auth login</i> command in a terminal prior to running the modules <br/>
 2. Create a terraform.tfvars files with your values. See table below for details. You can see sample values in [terraform.tfvars.sample](https://github.com/UriKatsirPrivate/gcp-landing-zone/blob/master/terraform.tfvars.sample) file.
 3. Run starter.sh to create the infrastructure.
 
