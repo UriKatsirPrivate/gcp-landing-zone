@@ -5,7 +5,7 @@ common-folder-names = ["development", "non-production", "production"]
 
 # The resource name of the parent Folder or Organization.
 # Must be of the form folders/folder_id or organizations/org_id
-parent = "organizations/993103645203"
+parent = "organizations/993103645203" # Replace with your Organization ID
 
 /******************************************
   VPC settings
@@ -43,7 +43,7 @@ https_source_ranges = ["0.0.0.0/0"]
 /******************************************
   Project settings
 ******************************************/
-billing_account     = "013950-3F911C-300B7F"
+billing_account     = "013950-3F911C-300B7F" # Replace with your billing account
 project-name-no-vpc = "custom-vpc"
 project-name        = "default-vpc"
 
@@ -54,7 +54,7 @@ If no match found, project will be assigned a default folder*/
 folder-name        = "development"
 folder-name-no-vpc = "production"
 
-organization-id = "993103645203"
+organization-id = "993103645203" # Replace with your Organization ID
 
 //Organization policies that will be enabled. Full list is here: https://cloud.google.com/resource-manager/docs/organization-policy/org-policy-constraints
 constraint_names = [
